@@ -1,0 +1,48 @@
+extends ../../node_modules/pug-bootstrap/layouts/sign-in
+
+append styles
+  // Custom styles for this template
+  link(href='../css/signin.css', rel='stylesheet')
+  // end comment
+
+block body
+  .container
+    form.form-signin(method="post", action="/redirect")
+      h1.form-signin-heading <p style="text-align: center">My Bank</p>
+      <br>
+      h3.form-signin-heading Consent
+      p.form-signin-heading Do you approve the following request?
+      table
+        tbody
+          tr
+            td <b>type:<b>
+            td <b>#{scope}</b>
+          tr
+            td <b>amount:</b>
+            td <b>#{amount}</b>
+          tr
+            td <b>currency:</b>
+            td <b>#{currency}</b>
+          tr
+            td <b>beneficiary:</b>
+            td <b>#{creditor}</b>
+          tr
+            td <b>reference:</b>
+            td <b>#{intent_id}</b>
+          tr
+            td <b>payment context:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+            td <b>#{context}</b>
+          tr
+            td <b>application:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+            td <b>#{app_name}</b>
+      <br>
+      input(type="hidden" name="original_url" value=original_url)
+      input(type="hidden" name="app_name" value=app_name)
+      input(type="hidden" name="name" value=name)
+      input(type="hidden" name="brand" value=brand)
+      input(type="hidden" name="channel" value=channel)
+      input(type="hidden" name="context" value=context)
+      input(type="hidden" name="state" value=state)
+      input(type="hidden" name="scope" value=scope)
+      input(type="hidden" name="clientid" value=clientid)
+      button.btn.btn-lg.btn-primary.btn-block(type='submit') Approve

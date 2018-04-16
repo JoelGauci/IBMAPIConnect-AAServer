@@ -1,0 +1,16 @@
+apiVersion: config.istio.io/v1alpha2
+kind: RouteRule
+metadata:
+  name: aaserver-service-test
+spec:
+  destination:
+    name: aaserver-service
+  precedence: 2
+  match:
+    request:
+      headers:
+        uri:
+          prefix: "/loginAccount/test.*"
+  route:
+  - labels:
+      version: test

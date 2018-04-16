@@ -1,0 +1,8 @@
+{
+  "mem": {
+    "name": "mem",
+    "localStorage": "",
+    "file": "players.json",
+    "connector": "memory"
+  }
+}

@@ -1,0 +1,8 @@
+module.exports = function(server) {
+  // Install a `/` route that returns server status
+  server.models.Player.create({
+    name:"Carlo",
+    surname:"Marcoli",
+    age:"43"
+  });
+};

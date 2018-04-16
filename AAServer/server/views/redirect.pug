@@ -1,0 +1,15 @@
+extends ../../node_modules/pug-bootstrap/layouts/sign-in
+
+append styles
+  // Custom styles for this template
+  link(href='../css/signin.css', rel='stylesheet')
+  // end comment
+
+block body
+  .container
+    form.form-signin(method="post", action="/redirect")
+      h2.form-signin-heading My Bank
+      h1.form-signin-heading
+      h4.form-signin-heading Hello #{name},
+      h4.form-signin-heading do you approve payment #{payment_id} ?
+      button.btn.btn-lg.btn-primary.btn-block(type='submit') Approve Payment

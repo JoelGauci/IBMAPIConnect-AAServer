@@ -1,0 +1,10 @@
+{
+  "ids": {
+    "Player": 2
+  },
+  "models": {
+    "Player": {
+      "1": "{\"name\":\"Carlo\",\"surname\":\"Marcoli\",\"age\":43,\"id\":1}"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+extends ../../node_modules/pug-bootstrap/layouts/sign-in
+
+append styles
+  // Custom styles for this template
+  link(href='../css/signin.css', rel='stylesheet')
+  // end comment
+
+block body
+  .container
+    form.form-signin(method="post", action="/redirectAccount")
+      h1.form-signin-heading <p style="text-align: center">My Bank</p>
+      <br>
+      h3.form-signin-heading Consent
+      p.form-signin-heading Do you approve <b>#{app_name}</b> accessing the following <u>accounts</u>, <u>transactions</u>, <u>balances</u> and <u>coverage control</u> information?
+      - var jsonData = JSON.parse(accounts);
+      - var l = jsonData.length;
+      - var accountsList = [];
+        - for (var x = 0; x < l ; x++)
+          - var label =  jsonData[x].name + " (IBAN:" + jsonData[x].iban + ")"
+          - var id = jsonData[x].id
+          - var accountName = "account-" + id
+          - accountsList.push(accountName)
+          label.radio-inline
+          input(type='checkbox', name=accountName, value=id, checked='')
+          = label
+          <br/>
+      input(type='checkbox', name='transactions', value=0, checked='')
+      |  Accounts transactions
+      <br/>
+      input(type='checkbox', name='balances', value=0, checked='')
+      |  Accounts balances report
+      <br/>
+      input(type='checkbox', name='coveragecontrol', value=0, checked='')
+      |  Accounts coverage control
+      <br/>
+      <br/>
+        input(type="hidden" name="original_url" value=original_url)
+        input(type="hidden" name="accountsList" value=accountsList)
+        input(type="hidden" name="app_name" value=app_name)
+        input(type="hidden" name="name" value=name)
+        input(type="hidden" name="brand" value=brand)
+        input(type="hidden" name="channel" value=channel)
+        input(type="hidden" name="context" value=context)
+        input(type="hidden" name="state" value=state)
+        input(type="hidden" name="scope" value=scope)
+        input(type="hidden" name="clientid" value=clientid)
+        button.btn.btn-lg.btn-primary.btn-block(type='submit') Approve

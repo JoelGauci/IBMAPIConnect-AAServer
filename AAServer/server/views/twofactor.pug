@@ -1,0 +1,24 @@
+extends ../../node_modules/pug-bootstrap/layouts/sign-in
+
+
+block body
+  .container
+    form.form-signin(method="post", action="/approve")
+      h1.form-signin-heading <p style="text-align: center">My Bank</p>
+      <br>
+      h3.form-signin-heading Strong authentication
+      p.form-signin-heading Please enter your one-time PIN code
+      label.sr-only(for='code') code
+      input#code.form-control(type='text', placeholder='Security code', required='', autofocus='',name='code')
+      input(type="hidden" name="name" value=name)
+      input(type="hidden" name="original_url" value=original_url)
+      input(type="hidden" name="app_name" value=app_name)
+      input(type="hidden" name="brand" value=brand)
+      input(type="hidden" name="context" value=context)
+      input(type="hidden" name="channel" value=channel)
+      input(type="hidden" name="state" value=state)
+      input(type="hidden" name="scope" value=scope)
+      input(type="hidden" name="clientid" value=clientid)
+      input(type="hidden" name="intent_id" value=intent_id)
+
+      button.btn.btn-lg.btn-primary.btn-block(type='submit') Verify

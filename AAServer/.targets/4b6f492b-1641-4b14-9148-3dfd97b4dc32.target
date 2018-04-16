@@ -1,0 +1,96 @@
+type: bluemix
+server:
+  displayName: United Kingdom
+  name: eu-gb
+  host: eu.apiconnect.ibmcloud.com
+org:
+  id: 58ac7a870cf2b5fab4346ba2
+  name: cmarcoliukibmcom-open-banking-aggregator
+  displayName: CMARCOLI@UK.IBM.COM (Open Banking Aggregator)
+  orgType: apiProvider
+  status: active
+  advPortalOverride: true
+  extUaaAuthenticated: false
+  requiresSSLClientCertCheck: false
+  dormant: false
+  url: 'https://eu.apiconnect.ibmcloud.com/v1/orgs/58ac7a870cf2b5fab4346ba2'
+  externalOrgId: bef8711e-d4d5-4c95-8e15-9597138d93e0
+  externalInviteOverride: 'https://console.eu-gb.bluemix.net/apis/catalog/invitation'
+  externalSpaceId: bef8711e-d4d5-4c95-8e15-9597138d93e0
+  externalNativeOrgId: 7793ee88-d9f1-4c26-8bbe-b1d22ff21070
+  bluemix:
+    inviteUri: 'https://console.eu-gb.bluemix.net/apis/catalog/invitation'
+    organization: 7793ee88-d9f1-4c26-8bbe-b1d22ff21070
+    space: bef8711e-d4d5-4c95-8e15-9597138d93e0
+catalog:
+  none: true
+space:
+  none: true
+app:
+  metadata:
+    guid: 21c6ef5a-a8d3-4c4f-a131-6b5213ca452c
+  entity:
+    guid: 21c6ef5a-a8d3-4c4f-a131-6b5213ca452c
+    name: aaserver-stet
+    routes:
+      - guid: 22473edd-bc04-40f9-817d-18bb276348ef
+        host: apiconnect-21c6ef5a-a8d3-4c4f-a131-6b5213ca452c
+        port: null
+        path: ''
+        domain:
+          guid: e90eb7df-be9e-4646-b283-7ea152f099e6
+          name: cmarcoliukibmcom-open-banking-aggregator.apic.eu-gb.mybluemix.net
+    running_instances: 0
+    services: []
+    available_domains:
+      - guid: e90eb7df-be9e-4646-b283-7ea152f099e6
+        name: cmarcoliukibmcom-open-banking-aggregator.apic.eu-gb.mybluemix.net
+        owning_organization_guid: 7793ee88-d9f1-4c26-8bbe-b1d22ff21070
+      - guid: 2571206b-66cd-449c-a5e5-eab84cc3c0e2
+        name: cmarcoliukibmcom-sandpit.apic.eu-gb.mybluemix.net
+        owning_organization_guid: 7793ee88-d9f1-4c26-8bbe-b1d22ff21070
+      - guid: f61e692e-3597-42d0-a9b5-471a3e2a5b4f
+        name: cmarcoliukibmcom-psd2-techsales.apic.eu-gb.mybluemix.net
+        owning_organization_guid: 7793ee88-d9f1-4c26-8bbe-b1d22ff21070
+      - guid: c3baae4e-5614-4b4b-a056-c993b6d53ab2
+        name: cmarcoliukibmcom-demo.apic.eu-gb.mybluemix.net
+        owning_organization_guid: 7793ee88-d9f1-4c26-8bbe-b1d22ff21070
+      - guid: 75049093-13e9-4520-80a6-2d6fea6542bc
+        name: eu-gb.mybluemix.net
+        router_group_guid: null
+        router_group_type: null
+    production: false
+    space_guid: bef8711e-d4d5-4c95-8e15-9597138d93e0
+    stack_guid: 423dd340-c07e-44c2-b7fb-601c10fd32d3
+    buildpack: null
+    detected_buildpack: null
+    detected_buildpack_guid: null
+    environment_json: {}
+    memory: 256
+    instances: 1
+    disk_quota: 1024
+    state: STOPPED
+    version: 8548359a-2093-4c01-9a84-cab6f7841781
+    command: null
+    console: false
+    debug: null
+    staging_task_id: null
+    package_state: PENDING
+    health_check_type: port
+    health_check_timeout: null
+    health_check_http_endpoint: null
+    staging_failed_reason: null
+    staging_failed_description: null
+    diego: true
+    docker_image: null
+    package_updated_at: '2018-01-08T15:40:52Z'
+    detected_start_command: ''
+    enable_ssh: true
+    ports: null
+id: 4b6f492b-1641-4b14-9148-3dfd97b4dc32
+target: 1.0.0
+versionOptions:
+  inplaceUpdate: true
+publishApp: true
+workspaceDir:
+  path: /Users/charlottehutchinson/ApiConnect/obsandbox/STET aspsp/AAServer
